@@ -1,0 +1,48 @@
+module.exports = {
+  parser: "babel-eslint",
+  parserOptions: {
+    requireConfigFile: false,
+  },
+  extends: [
+    "airbnb",
+    "prettier",
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+  ],
+  plugins: ["react-hooks"],
+  env: {
+    browser: true,
+    node: true,
+  },
+  rules: {
+    "react/button-has-type": "off",
+    "import/no-cycle": "off",
+    "react/jsx-props-no-spreading": "off",
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        components: ["Link"],
+        specialLink: ["to"],
+        aspects: ["noHref", "invalidHref", "preferButton"],
+      },
+    ],
+    "no-case-declarations": "off",
+    "no-shadow": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react/forbid-prop-types": "off",
+    "react/prop-types": "off",
+    "react/no-string-refs": "warn",
+    "react/prefer-stateless-function": "off",
+    "react/jsx-filename-extension": ["error", { extensions: [".js"] }],
+    "no-underscore-dangle": 0,
+    "no-await-in-loop": 0,
+    "no-use-before-define": "off",
+    "no-param-reassign": 0,
+    "global-require": 0,
+    "no-nested-ternary": 0,
+    "arrow-body-style": 0,
+  },
+}
